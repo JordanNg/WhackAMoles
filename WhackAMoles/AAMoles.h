@@ -10,4 +10,7 @@
 
 @interface AAMoles : UIView
 
+@property (assign, nonatomic) CGVector velocity;
+- (void)move;
+
 @end

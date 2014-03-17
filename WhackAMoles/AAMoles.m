@@ -19,13 +19,16 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+-(void)move
 {
-    // Drawing code
+    CGVector vel = self.velocity;
+    
+    self.velocity = vel;
+    
+    CGPoint loc = self.center;
+    loc.x += self.velocity.dx;
+    loc.y +=self.velocity.dy;
+    self.center = loc;
 }
-*/
 
 @end
