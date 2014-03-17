@@ -12,15 +12,31 @@
 @interface AAViewController ()
 @property (strong, nonatomic) NSMutableArray *moles;
 @property (assign, nonatomic) CGPoint velocity;
+
+@property (strong, nonatomic) CADisplayLink *displayLink;
 @end
 
 @implementation AAViewController
+
+-(void)tick:(CADisplayLink *)sender
+{
+    for (AAMoles *mole in self.moles) {
+        [mole move];
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.moles = [NSMutableArray array];
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self
+                                                   selector:@selector(tick:)];
+    
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop]
+                           forMode:NSDefaultRunLoopMode];
+
 }
 
 - (void)createMoleAtLocation:(CGPoint)location velocity:(CGVector)velocity
@@ -33,12 +49,10 @@
     [self.moles addObject:mole];
 }
 
-CGVector velocity = CGVectorMake(arc4random()%10, arc4random()%10);
-
 - (IBAction)handleFieldTapped:(UITapGestureRecognizer *)sender
 {
     CGPoint location = [sender locationInView:self.view];
-    [self createMoleAtLocation:location];
+    [self createMoleAtLocation:location velocity:CGVectorMake(0, -1.0 * (arc4random()%10 + 1.0))];
 }
 
 @end
