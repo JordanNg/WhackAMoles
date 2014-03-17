@@ -44,7 +44,7 @@
     AAMoles *mole = [[AAMoles alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
     mole.center = location;
     mole.velocity = velocity;
-    mole.backgroundColor = [UIColor redColor];
+    mole.backgroundColor = [UIColor colorWithHue:((arc4random()%10)/10.0) saturation:arc4random() brightness:arc4random() alpha:1];
     [self.view addSubview:mole];
     [self.moles addObject:mole];
 }
