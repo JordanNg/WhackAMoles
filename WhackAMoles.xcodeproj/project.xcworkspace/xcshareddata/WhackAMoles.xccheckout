@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>56E46C2B-C77D-4F3D-8411-C48EFA2AACA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WhackAMoles</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BFED04CF-54BF-4872-9210-95950DA7CCBC</key>
+		<string>https://github.com/JordanNg/WhackAMoles.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WhackAMoles.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BFED04CF-54BF-4872-9210-95950DA7CCBC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JordanNg/WhackAMoles.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BFED04CF-54BF-4872-9210-95950DA7CCBC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BFED04CF-54BF-4872-9210-95950DA7CCBC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WhackAMoles</string>
+		</dict>
+	</array>
+</dict>
+</plist>
