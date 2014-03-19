@@ -23,6 +23,21 @@
     for (AAMoles *mole in self.moles) {
         [mole move];
     }
+    [self removeDeadMoles];
+    NSLog(@"mole count: %i", [self.moles count]);
+}
+
+- (void)removeDeadMoles
+{
+    NSMutableArray *discardedMoles = [NSMutableArray array];
+    for (AAMoles *mole in self.moles) {
+        if (!CGRectIntersectsRect(self.view.bounds, mole.frame) || !mole.superview) {
+            [mole removeFromSuperview];
+            [discardedMoles addObject:mole];
+        }
+    }
+    
+    [self.moles removeObjectsInArray:discardedMoles];
 }
 
 - (void)viewDidLoad
